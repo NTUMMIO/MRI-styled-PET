@@ -11,12 +11,12 @@ conda install pytorch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2 pytorch-cuda=
 - ## Installation
 1. Clone the repository:
 ```bash
- git clone https://github.com/NTUMMIO/MRI-styled-PET-Dual-modality-Fusion-for-PET-Image-Enhancement.git
+git clone https://github.com/NTUMMIO/MRI-styled-PET-Dual-modality-Fusion-for-PET-Image-Enhancement.git
 ```
 
 2. Install dependencies:
 ```bash
- npm install
+conda env create -f \your_directory\environment.yaml
  ```
 
 ## Usage

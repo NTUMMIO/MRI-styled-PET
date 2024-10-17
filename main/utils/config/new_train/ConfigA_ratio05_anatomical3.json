@@ -1,0 +1,31 @@
+{   
+
+    "folder": "ConfigA_real",
+    "cuda": true,
+    "gpus": "0",
+    
+
+    "batchSize": 64,
+    "save_iter": 500,
+    "nEpochs": 30,
+    "lr": 5e-5,
+    "step": 200,
+    "start_epoch": 0,
+
+    "encoder": true,
+    "backbone": 0,
+
+    "anatomical_input_option": 3,
+    "ssim": false, 
+    "boundary": false,
+    "fusion": 1,
+    "fusion_op": true,
+
+    "ssim2pixel": 5,
+    "boundary2pixel": 50,
+
+    "ssim_pet2mri": 1,
+    "pixel_pet2mri": 1,
+    "boundary_pet2mri": 0.5
+}
+

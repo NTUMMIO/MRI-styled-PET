@@ -34,14 +34,16 @@ your_image_dir
 ```
 
 Under each subject's folder, there must exist both PET.nii and MRI.nii to run.
-**(Recommended)** If possible, the FreeSurfer recon-all -all pipeline should be run in advance. Refer to [run_reconall_parallel.sh](main/run_reconall_parallel.sh) on how to run recon-all on all subjects under your image directory (followed this file structure). If you have yet installed FreeSurfer on your OS, please refer to the [official FreeSurfer documentation](https://surfer.nmr.mgh.harvard.edu/fswiki/DownloadAndInstall). 
+**(Recommended)** If possible, the FreeSurfer recon-all -all pipeline should be run in advance. Refer to [run_reconall_parallel.sh](main/run_reconall_parallel.sh) on how to run recon-all on all subjects under your image folder. If you have yet installed FreeSurfer on your OS, please refer to the [official FreeSurfer documentation](https://surfer.nmr.mgh.harvard.edu/fswiki/DownloadAndInstall). 
 
 However, if FreeSurfer was not available, we also support two alternatives.
 
-###Option 1: SPM segmentation
+### Option 1: SPM segmentation
+
 blah, blah, blah, ...
 
-###Option 2: Pseudo segmented tissue maps estimated directly from MR images (i.e., the MR intensity-derived approach)
+### Option 2: Pseudo segmented tissue maps estimated directly from MR images (i.e., the MR intensity-derived approach)
+
 blah, blah, blah, ...
 
 2. Load the pretrained MRI-styled PET model

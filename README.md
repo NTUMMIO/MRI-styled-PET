@@ -1,8 +1,6 @@
 # MRI-styled-PET-Dual-modality-Fusion-for-PET-Image-Enhancement
 
-env_name=mr-styled-pet
-python=3.8
-conda install pytorch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2 pytorch-cuda=11.7 -c pytorch -c nvidia
+
 
 ## Table of Contents
 - [Installation](#installation)
@@ -16,12 +14,20 @@ git clone https://github.com/NTUMMIO/MRI-styled-PET-Dual-modality-Fusion-for-PET
 
 2. Install dependencies:
 ```bash
-conda env create -f \your_directory\environment.yaml
+cd MRI-styled-PET-Dual-modality-Fusion-for-PET-Image-Enhancement
+conda env create -f environment.yaml
  ```
 
 ## Usage
-To run the project, use the following command:
+To inference the MRI-styled PET model with input shape 112*112*112, run
 ```bash
-npm start
+cd main
+python inference.py --config ../src/experiments/best.json --segmentation 1 --resume_fusion_checkpoint ../src/checkpoint/model_fusion_best.pth --input_directory /your_image_dir 
+```
+
+Or with input shape 224*224*224, run
+```bash
+cd main
+python inference.py --config ../src/experiments/best.json --segmentation 1 --resume_fusion_checkpoint ../src/checkpoint/model_fusion_best_224.pth --input_directory /your_image_dir 
 ```
 

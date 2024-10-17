@@ -19,15 +19,42 @@ conda env create -f environment.yaml
  ```
 
 ## Usage
-To inference the MRI-styled PET model with input shape 112*112*112, run
+1. Make sure your image input directory is structured as below, 
+```
+your_image_dir 
+├─── subject001
+│    └─── PET.nii
+│    └─── MRI.nii
+│    └─── aparc.nii (Optional)
+│    └─── aparc+aseg.nii (Optional)
+├─── patient002
+│    └─── PET.nii
+│    └─── MRI.nii
+├─── ...
+```
+
+Under each subject's folder, there must exist both PET.nii and MRI.nii to run.
+**(Recommended)** If possible, the FreeSurfer recon-all -all pipeline should be run in advance. Refer to [run_reconall_parallel.sh](main/run_reconall_parallel.sh) on how to run recon-all on all subjects under your image directory (followed this file structure). If you have yet installed FreeSurfer on your OS, please refer to the [official FreeSurfer documentation](https://surfer.nmr.mgh.harvard.edu/fswiki/DownloadAndInstall). 
+
+However, if FreeSurfer was not available, we also support two alternatives.
+
+###Option 1: SPM segmentation
+blah, blah, blah, ...
+
+###Option 2: Pseudo segmented tissue maps estimated directly from MR images (i.e., the MR intensity-derived approach)
+blah, blah, blah, ...
+
+2. Load the pretrained MRI-styled PET model
+To inference with input shape (112, 112, 112), you can run
 ```bash
 cd main
 python inference.py --config ../src/experiments/best.json --segmentation 1 --resume_fusion_checkpoint ../src/checkpoint/model_fusion_best.pth --input_directory /your_image_dir 
 ```
 
-Or with input shape 224*224*224, run
+Or with input shape (224, 224, 224), you can run
 ```bash
 cd main
 python inference.py --config ../src/experiments/best.json --segmentation 1 --resume_fusion_checkpoint ../src/checkpoint/model_fusion_best_224.pth --input_directory /your_image_dir 
 ```
-
+3. Train your own MRI-styled PET model(Beta)
+blah, blah, blah, ...

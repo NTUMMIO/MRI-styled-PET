@@ -19,9 +19,9 @@ conda env create -f environment.yaml
  ```
 
 ## Usage
-1. Make sure your image input directory is structured as below, 
+1. Make sure your image directory is structured as below, 
 ```
-your_image_dir 
+your_image_folder
 ├─── subject001
 │    └─── PET.nii
 │    └─── MRI.nii
@@ -33,10 +33,10 @@ your_image_dir
 ├─── ...
 ```
 
-Under each subject's folder, there must exist both PET.nii and MRI.nii to run.
+Under each subject's folder, there must exist both PET.nii and MRI.nii to run without errors.
 **(Recommended)** If possible, the FreeSurfer recon-all -all pipeline should be run in advance. Refer to [run_reconall_parallel.sh](main/run_reconall_parallel.sh) on how to run recon-all on all subjects under your image folder. If you have yet installed FreeSurfer on your OS, please refer to the [official FreeSurfer documentation](https://surfer.nmr.mgh.harvard.edu/fswiki/DownloadAndInstall). 
 
-However, if FreeSurfer was not available, we also support two alternatives.
+However, if FreeSurfer was not available to you, we also support two alternatives.
 
 ### Option 1: SPM segmentation
 
@@ -58,5 +58,7 @@ Or with input shape (224, 224, 224), you can run
 cd main
 python inference.py --config ../src/experiments/best.json --segmentation 1 --resume_fusion_checkpoint ../src/checkpoint/model_fusion_best_224.pth --input_directory /your_image_dir 
 ```
-3. Train your own MRI-styled PET model(Beta)
+3. Train your own MRI-styled PET model
+
+(Beta)
 blah, blah, blah, ...

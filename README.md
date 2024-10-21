@@ -1,6 +1,4 @@
-# MRI-styled PET: Dual modality Fusion for PET Image Enhancement
-
-
+# MRI-styled PET: A Dual Modality Fusion Approach to PET Partial Volume Correction
 
 ## Table of Contents
 - [Installation](#installation)

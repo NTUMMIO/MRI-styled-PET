@@ -1,4 +1,4 @@
-# MRI-styled-PET-Dual-modality-Fusion-for-PET-Image-Enhancement
+# MRI-styled PET: Dual modality Fusion for PET Image Enhancement
 
 
 

@@ -38,11 +38,11 @@ However, if FreeSurfer was not available to you, we also support two alternative
 
 ### Option 1: SPM segmentation
 
-blah, blah, blah, ...
+
 
 ### Option 2: Pseudo segmented tissue maps estimated directly from MR images (i.e., the MR intensity-derived approach)
 
-blah, blah, blah, ...
+
 
 2. Load the pretrained MRI-styled PET model
 To inference with input shape (112, 112, 112), you can run
@@ -59,4 +59,4 @@ python inference.py --config ../src/experiments/best.json --segmentation 1 --res
 3. Train your own MRI-styled PET model
 
 (Beta)
-blah, blah, blah, ...
+
